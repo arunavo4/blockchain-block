@@ -68,9 +68,9 @@ Contributor(s):
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
-        <cTool>
-          <commandLine>-lcypto</commandLine>
-        </cTool>
+        <linkerTool>
+          <commandLine>-lcrypto</commandLine>
+        </linkerTool>
       </compileType>
       <item path="src/main.c" ex="false" tool="0" flavor2="0">
       </item>
