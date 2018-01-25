@@ -21,3 +21,8 @@ Considerando a estrutura básica, há os seguintes itens:
 O processo de mineração e validação de operações é realizado através da busca por um hash do qual inicie com uma determinada quantia do número zero, no caso desta demonstração foi definido que deve haver 4 zeros no início do hash.
 
 A variação do hash é realizada através do número nonce do qual é incrementado resultando assim na variação do hash final. As informações existentes são concatenadas e é aplicado a função hash do algorítimo sha256 tal como sha256(id nonce dados)
+
+
+### Demo
+
+![Demo](assets/demo.gif)

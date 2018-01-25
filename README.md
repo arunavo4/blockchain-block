@@ -21,3 +21,8 @@ Considering the basic structure, there are the following items:
 The process of mining and validating operations is done by searching for a hash that starts with a certain amount of the number zero, in case this demonstration was defined that there must be 4 zeros at the beginning of the hash.
 
 The variation of the hash is performed through the nonce number from which it is incremented resulting in the variation of the final hash. The existing information is concatenated and the hash function of the sha256 algorithm such as sha256(id nonce data) is applied, demonstrating the process.
+
+
+### Demo
+
+![Demo](assets/demo.gif)
