@@ -47,25 +47,26 @@ int main(int argc, char**argv) {
     printf("\n*** Please set the block data ***\n");
     printf("Block data.: ");
 
-    fgets(block.data, sizeof (block.data), stdin);
-    if ((strlen(block.data) > 0) && (block.data[strlen(block.data) - 1] == '\n'))
-        block.data[strlen(block.data) - 1] = '\0';
+    if (fgets(block.data, sizeof (block.data), stdin)) {
+        if ((strlen(block.data) > 0) && (block.data[strlen(block.data) - 1] == '\n'))
+            block.data[strlen(block.data) - 1] = '\0';
 
-    sha256sum_sign(&block, 0);
+        sha256sum_sign(&block, 0);
 
-    printf("\n*** Block without a signed structure ***\n");
-    printf("Block id...: %u\n", block.id);
-    printf("Block nonce: %u\n", block.nonce);
-    printf("Block data.: %s\n", block.data);
-    printf("Block hash.: %s\n", block.hash);
+        printf("\n*** Block without a signed structure ***\n");
+        printf("Block id...: %u\n", block.id);
+        printf("Block nonce: %u\n", block.nonce);
+        printf("Block data.: %s\n", block.data);
+        printf("Block hash.: %s\n", block.hash);
 
-    sha256sum_sign(&block, 1);
+        sha256sum_sign(&block, 1);
 
-    printf("\n*** Block signed ***\n");
-    printf("Block id...: %u\n", block.id);
-    printf("Block nonce: %u\n", block.nonce);
-    printf("Block data.: %s\n", block.data);
-    printf("Block hash.: %s\n", block.hash);
+        printf("\n*** Block signed ***\n");
+        printf("Block id...: %u\n", block.id);
+        printf("Block nonce: %u\n", block.nonce);
+        printf("Block data.: %s\n", block.data);
+        printf("Block hash.: %s\n", block.hash);
+    }
 
     return 0;
 }
