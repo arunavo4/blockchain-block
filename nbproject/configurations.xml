@@ -63,7 +63,7 @@ Contributor(s):
   <confs>
     <conf name="Debug" type="1">
       <toolsSet>
-        <compilerSet>default</compilerSet>
+        <compilerSet>GNU|GNU</compilerSet>
         <dependencyChecking>true</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
@@ -84,6 +84,7 @@ Contributor(s):
       <compileType>
         <cTool>
           <developmentMode>5</developmentMode>
+          <commandlineTool>gcc</commandlineTool>
         </cTool>
         <ccTool>
           <developmentMode>5</developmentMode>
@@ -94,6 +95,9 @@ Contributor(s):
         <asmTool>
           <developmentMode>5</developmentMode>
         </asmTool>
+        <linkerTool>
+          <commandLine>-lcrypto</commandLine>
+        </linkerTool>
       </compileType>
       <item path="src/main.c" ex="false" tool="0" flavor2="0">
       </item>
